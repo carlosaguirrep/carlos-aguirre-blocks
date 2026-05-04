@@ -1,0 +1,17 @@
+
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ */
+
+.wp-block-telex-block-telex-text-bubble {
+	display: inline-block;
+	padding: 0.35em 0.85em;
+	line-height: 1.5;
+	font-weight: 500;
+	transition: opacity 0.2s ease;
+	vertical-align: middle;
+	word-break: break-word;
+	max-width: 100%;
+	box-sizing: border-box;
+}

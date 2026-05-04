@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "telex/block-telex-text-bubble",
+  "version": "0.1.0",
+  "title": "Text Bubble Block",
+  "category": "text",
+  "icon": "format-status",
+  "description": "A customizable inline text bubble block with adjustable border radius, font size, background color, and text color.",
+  "example": {
+    "attributes": {
+      "content": "Hello, I'm a bubble!",
+      "borderRadius": 20,
+      "fontSize": 16,
+      "backgroundColor": "#6c5ce7",
+      "textColor": "#ffffff"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": "Text bubble"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 20
+    },
+    "fontSize": {
+      "type": "number",
+      "default": 16
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#6c5ce7"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#ffffff"
+    }
+  },
+  "textdomain": "telex-text-bubble",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

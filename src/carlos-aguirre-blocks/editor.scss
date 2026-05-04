@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor only.
+ */
+
+.cap-card {
+	border: 1px solid #d1d5db;
+}
+
+.cap-card__icon {
+	transition: background-color 0.25s ease;
+}
+
+.cap-card:hover .cap-card__icon {
+	background: rgba(250, 204, 21, 0.2);
+}

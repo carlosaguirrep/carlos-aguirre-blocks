@@ -1,0 +1,45 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/carlos-aguirre-blocks/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ */
+.cap-card {
+  background: #ffffff;
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.cap-card:hover {
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+}
+.cap-card__icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(250, 204, 21, 0.1);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.cap-card__svg {
+  width: 28px;
+  height: 28px;
+  color: #111827;
+}
+.cap-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.cap-card__text {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.75;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

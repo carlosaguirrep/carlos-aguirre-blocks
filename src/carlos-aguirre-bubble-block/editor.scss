@@ -1,0 +1,18 @@
+
+/**
+ * The following styles get applied inside the editor only.
+ */
+
+.wp-block-telex-block-telex-text-bubble {
+	min-width: 3em;
+	cursor: text;
+	outline: none;
+
+	&:focus {
+		box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+	}
+
+	&[data-rich-text-placeholder]::after {
+		opacity: 0.5;
+	}
+}
