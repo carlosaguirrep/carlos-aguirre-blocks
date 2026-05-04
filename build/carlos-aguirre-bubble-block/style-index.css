@@ -16,5 +16,8 @@
   max-width: 100%;
   box-sizing: border-box;
 }
+.wp-block-telex-block-telex-text-bubble p {
+  margin: 0;
+}
 
 /*# sourceMappingURL=style-index.css.map*/

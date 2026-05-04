@@ -172,7 +172,7 @@ module.exports = window["wp"]["components"];
   \*******************************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"capblocks/carlos-aguirre-blocks-small-separator","version":"0.1.0","title":"Separator Custom","category":"theme","icon":"category","description":"Simple separator block","attributes":{"width":{"type":"range","default":100},"height":{"type":"string","default":"2px"},"color":{"type":"string","default":"#000000"}},"example":{},"supports":{"html":false},"textdomain":"carlos-aguirre-blocks","editorScript":"file:./index.js","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"capblocks/carlos-aguirre-blocks-small-separator","version":"0.1.0","title":"Separator Custom","category":"theme","icon":"category","description":"Simple separator block","attributes":{"width":{"type":"number","default":100},"height":{"type":"string","default":"2px"},"color":{"type":"string","default":"#000000"}},"example":{},"supports":{"html":false},"textdomain":"carlos-aguirre-blocks","editorScript":"file:./index.js","render":"file:./render.php"}');
 
 /***/ }
 

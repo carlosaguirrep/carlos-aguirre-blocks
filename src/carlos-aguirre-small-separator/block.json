@@ -9,7 +9,7 @@
 	"description": "Simple separator block",
 	"attributes": {
 		"width": {
-			"type": "range",
+			"type": "number",
 			"default": 100
 		},
 		"height" : {

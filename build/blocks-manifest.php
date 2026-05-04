@@ -143,7 +143,7 @@ return array(
 		'description' => 'Simple separator block',
 		'attributes' => array(
 			'width' => array(
-				'type' => 'range',
+				'type' => 'number',
 				'default' => 100
 			),
 			'height' => array(
