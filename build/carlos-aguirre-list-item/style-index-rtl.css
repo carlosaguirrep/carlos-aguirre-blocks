@@ -1,0 +1,30 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/carlos-aguirre-list-item/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+.capblocks-icon-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0px;
+}
+.capblocks-icon-list-item p {
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+}
+.capblocks-icon-list-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: var(--wp--preset--color--primary);
+  border-radius: 50%;
+  color: var(--wp--preset--color--tertiary);
+}
+.capblocks-icon-list-item__icon svg {
+  color: var(--wp--preset--color--tertiary);
+  width: 12px;
+  height: 12px;
+}

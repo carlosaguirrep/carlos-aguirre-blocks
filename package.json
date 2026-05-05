@@ -13,7 +13,8 @@
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start --blocks-manifest"
+		"start": "wp-scripts start --blocks-manifest",
+    	"create:block": "node scripts/create-block.js"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^7.2.0",

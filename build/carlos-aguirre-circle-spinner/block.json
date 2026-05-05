@@ -1,0 +1,26 @@
+{
+  "apiVersion": 3,
+  "name": "capblocks/carlos-aguirre-circle-spinner",
+  "title": "circle spinner",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Bloque carlos-aguirre-circle-spinner",
+  "attributes": {
+    "number": {
+      "type": "number",
+      "default": 100
+    },
+    "label": {
+      "type": "string",
+      "default": "PAGESPEED SCORE"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "carlos-aguirre-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

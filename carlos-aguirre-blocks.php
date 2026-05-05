@@ -29,3 +29,53 @@ function capblocks_carlos_aguirre_blocks_block_init() {
 	wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
 }
 add_action( 'init', 'capblocks_carlos_aguirre_blocks_block_init' );
+
+
+/**
+ * Registers a REST API endpoint to retrieve public post types.
+ */
+if ( ! function_exists( 'telex_featured_post_card_register_rest_routes' ) ) {
+	function telex_featured_post_card_register_rest_routes(): void {
+		register_rest_route(
+			'telex-featured-post-card/v1',
+			'/post-types',
+			array(
+				'methods'             => 'GET',
+				'callback'            => 'telex_featured_post_card_get_post_types',
+				'permission_callback' => function (): bool {
+					return current_user_can( 'edit_posts' );
+				},
+			)
+		);
+	}
+}
+add_action( 'rest_api_init', 'telex_featured_post_card_register_rest_routes' );
+
+/**
+ * Returns a list of public post types for the REST API.
+ *
+ * @return WP_REST_Response
+ */
+if ( ! function_exists( 'telex_featured_post_card_get_post_types' ) ) {
+	function telex_featured_post_card_get_post_types(): WP_REST_Response {
+		$post_types = get_post_types(
+			array(
+				'public' => true,
+			),
+			'objects'
+		);
+
+		$result = array();
+		foreach ( $post_types as $post_type ) {
+			if ( 'attachment' === $post_type->name ) {
+				continue;
+			}
+			$result[] = array(
+				'slug'  => $post_type->name,
+				'label' => $post_type->labels->singular_name,
+			);
+		}
+
+		return new WP_REST_Response( $result, 200 );
+	}
+}

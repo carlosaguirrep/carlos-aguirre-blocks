@@ -1,0 +1,48 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/carlos-aguirre-circle-spinner/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+.capblocks-circle-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.capblocks-circle-spinner__score-circle {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  border: 4px solid #1f2937;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.capblocks-circle-spinner__spinner {
+  position: absolute;
+  inset: 0;
+  border-top: 4px solid #facc15;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+.capblocks-circle-spinner__content {
+  text-align: center;
+}
+.capblocks-circle-spinner__number {
+  display: block;
+  font-size: 3.75rem;
+  font-weight: 800;
+  color: #facc15;
+}
+.capblocks-circle-spinner__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

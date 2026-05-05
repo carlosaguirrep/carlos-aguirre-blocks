@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "capblocks/featured-post-card",
+  "version": "0.1.0",
+  "title": "Featured Post Card Block",
+  "category": "media",
+  "icon": "format-image",
+  "description": "A featured post card that displays a large image, title, subtitle, and link from any post type.",
+  "example": {
+    "attributes": {
+      "subtitle": "UI/UX & WEBAPP",
+      "postTitle": "Nexus Platform",
+      "imageUrl": ""
+    }
+  },
+  "attributes": {
+    "postId": {
+      "type": "number",
+      "default": 0
+    },
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "postTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "postLink": {
+      "type": "string",
+      "default": ""
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "carlos-aguirre-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php"
+}

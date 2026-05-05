@@ -85,6 +85,133 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'carlos-aguirre-circle-spinner' => array(
+		'apiVersion' => 3,
+		'name' => 'capblocks/carlos-aguirre-circle-spinner',
+		'title' => 'circle spinner',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Bloque carlos-aguirre-circle-spinner',
+		'attributes' => array(
+			'number' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'label' => array(
+				'type' => 'string',
+				'default' => 'PAGESPEED SCORE'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'carlos-aguirre-blocks',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'carlos-aguirre-cpt-card' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'capblocks/featured-post-card',
+		'version' => '0.1.0',
+		'title' => 'Featured Post Card Block',
+		'category' => 'media',
+		'icon' => 'format-image',
+		'description' => 'A featured post card that displays a large image, title, subtitle, and link from any post type.',
+		'example' => array(
+			'attributes' => array(
+				'subtitle' => 'UI/UX & WEBAPP',
+				'postTitle' => 'Nexus Platform',
+				'imageUrl' => ''
+			)
+		),
+		'attributes' => array(
+			'postId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'postType' => array(
+				'type' => 'string',
+				'default' => 'post'
+			),
+			'subtitle' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'postTitle' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'postLink' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'imageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'textdomain' => 'carlos-aguirre-blocks',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js',
+		'render' => 'file:./render.php'
+	),
+	'carlos-aguirre-list-item' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'capblocks/list-item',
+		'version' => '0.1.0',
+		'title' => 'List Item Block',
+		'category' => 'media',
+		'icon' => 'editor-ul',
+		'description' => 'A list item block for displaying content in a list format.',
+		'example' => array(
+			'attributes' => array(
+				'content' => 'a list item'
+			)
+		),
+		'attributes' => array(
+			'content' => array(
+				'type' => 'string',
+				'default' => 'a list item'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'textdomain' => 'carlos-aguirre-blocks',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'carlos-aguirre-modal-card' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
