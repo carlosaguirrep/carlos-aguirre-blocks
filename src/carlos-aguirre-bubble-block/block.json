@@ -32,6 +32,10 @@
 			"type": "number",
 			"default": 16
 		},
+		"letterSpacing": {
+			"type": "number",
+			"default": 1
+		},
 		"backgroundColor": {
 			"type": "string",
 			"default": "#6c5ce7"
@@ -39,6 +43,10 @@
 		"textColor": {
 			"type": "string",
 			"default": "#ffffff"
+		},
+		"upperCase" : {
+			"type": "boolean",
+			"default": true
 		}
 	},
 	"textdomain": "telex-text-bubble",

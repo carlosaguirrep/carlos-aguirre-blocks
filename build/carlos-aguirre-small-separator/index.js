@@ -26,13 +26,18 @@ function save({
     borderRadius,
     fontSize,
     backgroundColor,
-    textColor
+    textColor,
+    upperCase,
+    letterSpacing
   } = attributes;
+  const uppercase = upperCase ? "uppercase" : "null";
   const bubbleStyle = {
     borderRadius: borderRadius + 'px',
     fontSize: fontSize + 'px',
     backgroundColor,
-    color: textColor
+    color: textColor,
+    textTransform: uppercase,
+    letterSpacing: letterSpacing
   };
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
     className: 'wp-block-telex-text-bubble',

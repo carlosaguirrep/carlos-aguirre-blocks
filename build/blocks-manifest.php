@@ -70,6 +70,10 @@ return array(
 				'type' => 'number',
 				'default' => 16
 			),
+			'letterSpacing' => array(
+				'type' => 'number',
+				'default' => 1
+			),
 			'backgroundColor' => array(
 				'type' => 'string',
 				'default' => '#6c5ce7'
@@ -77,6 +81,10 @@ return array(
 			'textColor' => array(
 				'type' => 'string',
 				'default' => '#ffffff'
+			),
+			'upperCase' => array(
+				'type' => 'boolean',
+				'default' => true
 			)
 		),
 		'textdomain' => 'telex-text-bubble',

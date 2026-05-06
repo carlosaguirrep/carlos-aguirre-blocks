@@ -16,8 +16,11 @@ import { useBlockProps, InspectorControls, RichText } from '@wordpress/block-edi
 import {
 	PanelBody,
 	RangeControl,
-	ColorPalette,
+	ColorPicker,
+	CheckboxControl,
+	__experimentalUnitControl as UnitControl
 } from '@wordpress/components';
+import { useState } from 'react';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -39,20 +42,22 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const { content, borderRadius, fontSize, backgroundColor, textColor } = attributes;
+	const { content, borderRadius, fontSize, backgroundColor, textColor, upperCase, letterSpacing } = attributes;
 
 	const bubbleStyle = {
 		borderRadius: borderRadius + 'px',
 		fontSize: fontSize + 'px',
 		backgroundColor,
 		color: textColor,
+		textTransform: upperCase ? 'uppercase' : 'none',
+		letterSpacing: letterSpacing
 	};
 
 	const blockProps = useBlockProps( {
 		className: 'wp-block-telex-text-bubble',
 		style: bubbleStyle,
 	} );
-
+	const [ isChecked, setChecked ] = useState( true );
 	return (
 		<>
 			<InspectorControls>
@@ -75,19 +80,33 @@ export default function Edit( { attributes, setAttributes } ) {
 						min={ 10 }
 						max={ 72 }
 					/>
+					 <CheckboxControl
+						label="Uppercase"
+						help="Uppercase Text"
+						checked={ upperCase }
+						onChange={ ( value ) => {
+							setAttributes({ upperCase: value });
+						} }
+					/>
+					<UnitControl
+						label="Letter Spacing"
+						value={ letterSpacing }
+						onChange={ (value) => setAttributes({ letterSpacing: value }) }
+					/>
+					
 				</PanelBody>
 				<PanelBody title={ __( 'Background Color', 'telex-text-bubble' ) } initialOpen={ false }>
-					<ColorPalette
-						value={ backgroundColor }
+					<ColorPicker
+						color={ backgroundColor }
 						onChange={ ( value ) => setAttributes( { backgroundColor: value } ) }
-						clearable={ true }
+						enableAlpha
 					/>
 				</PanelBody>
 				<PanelBody title={ __( 'Text Color', 'telex-text-bubble' ) } initialOpen={ false }>
-					<ColorPalette
-						value={ textColor }
+					<ColorPicker
+						color={ textColor }
 						onChange={ ( value ) => setAttributes( { textColor: value } ) }
-						clearable={ true }
+						enableAlpha
 					/>
 				</PanelBody>
 			</InspectorControls>
